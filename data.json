@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Smurf mug",
+    "description": "blue mug",
+    "price": 3.5,
+    "thumbnail": "img/smurf-mug.jpeg",
+    "code": "bsm",
+    "stock": 12,
+    "id": 1
+  },
+  {
+    "title": "Gandalf mug",
+    "description": "grey mug",
+    "price": 3.5,
+    "thumbnail": "img/gandalf-mug.jpeg",
+    "code": "ggm",
+    "stock": 12,
+    "id": 2
+  },
+  {
+    "title": "Canary mug",
+    "description": "yellow mug",
+    "price": 3.5,
+    "thumbnail": "img/canary-mug.jpeg",
+    "code": "ycm",
+    "stock": 12,
+    "id": 3
+  },
+  {
+    "title": "Goblin mug",
+    "description": "green mug",
+    "price": 3.5,
+    "thumbnail": "img/goblin-mug.jpeg",
+    "code": "grgm",
+    "stock": 12,
+    "id": 4
+  },
+  {
+    "title": "Black cat mug",
+    "description": "black mug",
+    "price": 3.5,
+    "thumbnail": "img/black-cat-mug.jpeg",
+    "code": "bcm",
+    "stock": 12,
+    "id": 5
+  },
+  {
+    "title": "Ghost mug",
+    "description": "white mug",
+    "price": 3.5,
+    "thumbnail": "img/ghost-mug.jpeg",
+    "code": "wgm",
+    "stock": 12,
+    "id": 6
+  },
+  {
+    "title": "Pink panther mug",
+    "description": "pink mug",
+    "price": 3.5,
+    "thumbnail": "img/pink-panther-mug.jpeg",
+    "code": "ppm",
+    "stock": 12,
+    "id": 7
+  },
+  {
+    "title": "Black panther mug",
+    "description": "black panther mug",
+    "price": 3.5,
+    "thumbnail": "img/black-panter-mug.jpeg",
+    "code": "bbm",
+    "stock": 12,
+    "id": 8
+  },
+  {
+    "title": "Tree mug",
+    "description": "brown mug",
+    "price": 3.5,
+    "thumbnail": "img/tree-mug.jpeg",
+    "code": "btm",
+    "stock": 12,
+    "id": 9
+  },
+  {
+    "title": "Red hood mug",
+    "description": "red mug",
+    "price": 3.5,
+    "thumbnail": "img/red-hood-mug.jpeg",
+    "code": "rhm",
+    "stock": 12,
+    "id": 10
+  },
+  {
+    "id": 11,
+    "title": "Sea mug",
+    "description": "ocean blue mug",
+    "code": "obm",
+    "price": 3.5,
+    "stats": "True",
+    "stock": 25,
+    "category": "mugs",
+    "thumbnails": [
+      "path1",
+      "path2",
+      "path3"
+    ]
+  }
+]
