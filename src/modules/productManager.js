@@ -29,10 +29,10 @@ class ProductManager {
         
 
                        
-        addProduct (title, description, code, price, stats, stock, category, thumbnails) {
+        addProduct (title, description, code, price, stats = true, stock, category, thumbnails) {
 
         
-        try { if(title.length == 0 || description.length == 0 || code.length == 0 || price.length == 0 || stats.length == 0 || stock.length == 0 || category.length == 0 || thumbnails.length == 0 ){console.log("Surprise MotherFather!");}
+        try { if(title.length == 0 || description.length == 0 || code.length == 0 || price.length == 0 || stats.length == 0 || stock.length == 0 || category.length == 0){console.log("Surprise MotherFather!");}
             
         }
 
@@ -40,6 +40,13 @@ class ProductManager {
             
             return "Data incomplete!";
                        
+        }
+
+        let thumbnailsValue = [];
+
+        if(thumbnails.length != 0){
+            thumbnailsValue.push(thumbnails);
+
         }
 
         let flag = true;
@@ -64,7 +71,7 @@ class ProductManager {
        
 
 
-        catalogue.push({id, title, description, code, price, stats, stock, category, thumbnails})
+        catalogue.push({id, title, description, code, price, stats, stock, category, thumbnailsValue})
         const jsonData = JSON.stringify(catalogue, null, 2);
         fs.writeFileSync(this.path, jsonData);
         return "Product added successfully!";

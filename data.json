@@ -22,7 +22,7 @@
     "description": "yellow mug",
     "price": 3.5,
     "thumbnail": "img/canary-mug.jpeg",
-    "code": "ycm",
+    "code": "fieldValue",
     "stock": 12,
     "id": 3
   },
