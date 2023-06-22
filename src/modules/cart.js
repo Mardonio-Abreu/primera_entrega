@@ -2,7 +2,7 @@
 class Cart {
     constructor(cid){
                 
-        this.cid = id;
+        this.cid = cid;
         this.products = [];
     }
 

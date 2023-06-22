@@ -5,16 +5,14 @@ class CartManager {
     
     constructor(path){
         this.path = path;
-        this.cartArray = [];
-        this.cid = 0;
-
         this.createFile();
-                
+                       
     }
 
     
     createFile () {
-        const jsonData = JSON.stringify(this.cartArray, null, 2);
+        let cartArray = [];
+        const jsonData = JSON.stringify(cartArray, null, 2);
         fs.writeFileSync(this.path, jsonData);
     }
 
@@ -29,28 +27,29 @@ class CartManager {
             console.log("File not found!");
          }}
 
-    writeCartArray(){
-        const jsonData = JSON.stringify(this.cartArray, null, 2);
+    writeCartArray(data){
+        const jsonData = JSON.stringify(data, null, 2);
         fs.writeFileSync(this.path, jsonData);
     }
     
     createCart(){
 
-        let cartArray = this.getCartArray();
-        cartArray.map((cart) => {
-          
-            if(cart.cid === 0 ){
-                const cart = new Cart(this.cid++, this.path);
-                this.cartArray.push(cart);
-                this.writeCartArray();
+            let cartArray = this.getCartArray();
+                
+            if(cartArray.length === 0 ){
+                const cart = new Cart(1);
+                cartArray.unshift(cart);
+                this.writeCartArray(cartArray);
                 return 'Cart created!';
             }else{
-                const cart = new Cart(cart.id++, this.path);
-                this.cartArray.push(cart);
-                this.writeCartArray();
+                const lastItem =cartArray[cartArray.length - 1];
+                const cart = new Cart(lastItem.cid++);
+                cartArray.unshift(cart);
+                this.writeCartArray(cartArray);
                 return 'Cart created!';
             }
-        })
+            
+        
     }
 
     getCart(cid){

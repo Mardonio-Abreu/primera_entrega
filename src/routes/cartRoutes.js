@@ -7,12 +7,12 @@ const cartManager = new CartManager(FILE);
 
 
 cartRouter.post('/api/carts/', (req, res) => {
-    let flag = cartManager.createCart();
+    flag = cartManager.createCart();
     res.send(console.log(flag));
 });
 
 
-cartRouter.get('/:cid', (req, res) => {
+cartRouter.get('/api/carts/:cid', (req, res) => {
 
     let cid = req.params.cid;
     let items = cartManager.getCart(cid);
