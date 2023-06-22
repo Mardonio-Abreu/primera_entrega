@@ -1,28 +1,10 @@
 [
   {
-    "title": "Smurf mug",
-    "description": "blue mug",
-    "price": 3.5,
-    "thumbnail": "img/smurf-mug.jpeg",
-    "code": "bsm",
-    "stock": 12,
-    "id": 1
-  },
-  {
-    "title": "Gandalf mug",
-    "description": "grey mug",
-    "price": 3.5,
-    "thumbnail": "img/gandalf-mug.jpeg",
-    "code": "ggm",
-    "stock": 12,
-    "id": 2
-  },
-  {
     "title": "Canary mug",
     "description": "yellow mug",
     "price": 3.5,
     "thumbnail": "img/canary-mug.jpeg",
-    "code": "fieldValue",
+    "code": "fieldValue1",
     "stock": 12,
     "id": 3
   },
@@ -34,33 +16,6 @@
     "code": "grgm",
     "stock": 12,
     "id": 4
-  },
-  {
-    "title": "Black cat mug",
-    "description": "black mug",
-    "price": 3.5,
-    "thumbnail": "img/black-cat-mug.jpeg",
-    "code": "bcm",
-    "stock": 12,
-    "id": 5
-  },
-  {
-    "title": "Ghost mug",
-    "description": "white mug",
-    "price": 3.5,
-    "thumbnail": "img/ghost-mug.jpeg",
-    "code": "wgm",
-    "stock": 12,
-    "id": 6
-  },
-  {
-    "title": "Pink panther mug",
-    "description": "pink mug",
-    "price": 3.5,
-    "thumbnail": "img/pink-panther-mug.jpeg",
-    "code": "ppm",
-    "stock": 12,
-    "id": 7
   },
   {
     "title": "Black panther mug",
@@ -102,6 +57,74 @@
       "path1",
       "path2",
       "path3"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Sea mug",
+    "description": "ocean blue mug",
+    "code": "obm1",
+    "price": 3.5,
+    "stats": "True",
+    "stock": 25,
+    "category": "mugs",
+    "thumbnailsValue": [
+      [
+        "path1",
+        "path2",
+        "path3"
+      ]
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Sea mug",
+    "description": "ocean blue mug",
+    "code": "obm11",
+    "price": 3.5,
+    "stats": "True",
+    "stock": 25,
+    "category": "mugs",
+    "thumbnailsValue": [
+      [
+        "path1",
+        "path2",
+        "path3"
+      ]
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Sea mug",
+    "description": "ocean blue mug",
+    "code": "obm121",
+    "price": 3.5,
+    "stats": "True",
+    "stock": 25,
+    "category": "mugs",
+    "thumbnailsValue": [
+      [
+        "path1",
+        "path2",
+        "path3"
+      ]
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Sea mug",
+    "description": "ocean blue mug",
+    "code": "obm12221",
+    "price": 3.5,
+    "stats": "True",
+    "stock": 25,
+    "category": "mugs",
+    "thumbnailsValue": [
+      [
+        "path1",
+        "path2",
+        "path3"
+      ]
     ]
   }
 ]

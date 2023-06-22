@@ -1,9 +1,9 @@
 const {Router} = require('express');
 const CartManager = require('../modules/cartManager');
-const FILE = './carts.json'
+const FILE = './cartData.json'
 
 const cartRouter = Router();
-const cartManager = new CartManager();
+const cartManager = new CartManager(FILE);
 
 
 cartRouter.post('/api/carts/', (req, res) => {
@@ -12,14 +12,14 @@ cartRouter.post('/api/carts/', (req, res) => {
 });
 
 
-cartRouter.get('/api/carts/:cid', (req, res) => {
+cartRouter.get('/:cid', (req, res) => {
 
     let cid = req.params.cid;
     let items = cartManager.getCart(cid);
     res.send(items);
 });
 
-cartRouter.post('/api/carts/:cid/product/:pid', (req, res) => {
+cartRouter.post('/:cid/product/:pid', (req, res) => {
 
     let {cid, pid} = req.body;
     let flag = cartManager.addProduct(cid, pid);

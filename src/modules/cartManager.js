@@ -2,11 +2,12 @@ const fs = require('fs');
 const Cart = require('./cart');
 
 class CartManager {
+    
     constructor(path){
         this.path = path;
         this.cartArray = [];
         this.cid = 0;
-
+                
     }
 
     getCartArray(){

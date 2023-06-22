@@ -26,10 +26,10 @@ class Cart {
         fs.writeFileSync(this.path, jsonData);
     }
 
-    createFile () {
+    createFile (file) {
         const cartItems = [];
         const jsonData = JSON.stringify(cartItems, null, 2);
-        fs.writeFileSync(this.path, jsonData);
+        fs.writeFileSync(file, jsonData);
     }
 
     getCart(){
