@@ -7,8 +7,17 @@ class CartManager {
         this.path = path;
         this.cartArray = [];
         this.cid = 0;
+
+        this.createFile();
                 
     }
+
+    
+    createFile () {
+        const jsonData = JSON.stringify(this.cartArray, null, 2);
+        fs.writeFileSync(this.path, jsonData);
+    }
+
 
     getCartArray(){
             
@@ -20,8 +29,8 @@ class CartManager {
             console.log("File not found!");
          }}
 
-    writeCartArray(data){
-        const jsonData = JSON.stringify(data, null, 2);
+    writeCartArray(){
+        const jsonData = JSON.stringify(this.cartArray, null, 2);
         fs.writeFileSync(this.path, jsonData);
     }
     
@@ -31,15 +40,15 @@ class CartManager {
         cartArray.map((cart) => {
           
             if(cart.cid === 0 ){
-                const cart = newCart(this.cid++, this.path);
+                const cart = new Cart(this.cid++, this.path);
                 this.cartArray.push(cart);
-                this.writeCartArray(cartArray);
-                return ('Cart created!');
+                this.writeCartArray();
+                return 'Cart created!';
             }else{
                 const cart = new Cart(cart.id++, this.path);
                 this.cartArray.push(cart);
-                this.writeCartArray(cartArray);
-                return ('Cart created!');
+                this.writeCartArray();
+                return 'Cart created!';
             }
         })
     }

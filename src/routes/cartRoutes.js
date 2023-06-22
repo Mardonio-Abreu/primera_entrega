@@ -8,7 +8,7 @@ const cartManager = new CartManager(FILE);
 
 cartRouter.post('/api/carts/', (req, res) => {
     let flag = cartManager.createCart();
-    res.send(flag);
+    res.send(console.log(flag));
 });
 
 
