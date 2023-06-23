@@ -65,18 +65,17 @@ class CartManager {
     }
 
     addProduct(cid, pid){
-        let cartArray = this.getCartArray();
-        cartArray.map((item) => {
-            if(cid === item.cid){
-                item.cid.addProduct(pid);
-                this.writeCartArray(cartArray);
-                console.log(`Product: ${pid} added to cart: ${cid}`);
-            }else{
-                console.log(`Cart ID: ${cid} not found!`);
-            }
-        })
+        const cartArray = this.getCartArray();
+        const item  = cartArray.find(item => item.cid === cid);
+        const index = cartArray.indexOf(item);
+        if (index !== -1){
+            cartArray[index].products.push({pid: pid});
+            this.writeCartArray(cartArray);
+            console.log(`Product: ${pid} added to cart: ${cid}`);
+        }else{
+            console.log(`Cart ID: ${cid} not found!`);
+        }    
     }
-
 
 }
 

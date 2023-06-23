@@ -19,9 +19,10 @@ cartRouter.get('/api/carts/:cid', (req, res) => {
     res.send(items);
 });
 
-cartRouter.post('/:cid/product/:pid', (req, res) => {
+cartRouter.post('/api/carts/:cid/product/:pid', (req, res) => {
 
-    let {cid, pid} = req.body;
+    let cid = parseInt(req.params.cid);
+    let pid = parseInt(req.params.pid);
     let flag = cartManager.addProduct(cid, pid);
     res.send(flag);
 
