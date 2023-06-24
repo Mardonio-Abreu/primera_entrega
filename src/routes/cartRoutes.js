@@ -14,7 +14,7 @@ cartRouter.post('/api/carts/', (req, res) => {
 
 cartRouter.get('/api/carts/:cid', (req, res) => {
 
-    let cid = req.params.cid;
+    let cid = parseInt(req.params.cid);
     let items = cartManager.getCart(cid);
     res.send(items);
 });
