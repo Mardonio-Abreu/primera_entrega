@@ -5,6 +5,32 @@ const FILE = './data.json'
 const productRouter = Router();
 const catalogue = new ProductManager(FILE);
 
+productRouter.get('/api/products', async(req, res)=>{
+    let limit = req.query.limit;
+    let num = parseInt(limit);
+    let items = [];
+    
+    try{
+    if(num > 0 && num <=10){
+        for(let i = 1; i < num + 1; i++){
+            items.push(await catalogue.getProductsById(i));
+        }
+    }else if (num <= 0 || num > 10)
+        {
+        items = "Not a valid limit!";
+    }else{
+        items = await catalogue.getProducts(FILE);
+        
+    }
+
+    res.send(items);
+}catch(error){
+    console.error("The database couldn't be read", error);
+}
+}
+
+);
+
 productRouter.get('/api/products/', (req, res) => {
 
     const items = catalogue.getProducts();

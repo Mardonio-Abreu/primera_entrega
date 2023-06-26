@@ -3,7 +3,7 @@
 const fs = require('fs');
 class ProductManager {
     constructor(file){
-
+        this.createFile(file);
         this.path = file;
                                
     }
@@ -19,12 +19,12 @@ class ProductManager {
              }}
 
 
-       createFile () {
+       createFile (file) {
             
         
             let catalogue = [];
             const jsonData = JSON.stringify(catalogue, null, 2);
-            fs.writeFileSync(this.path, jsonData);
+            fs.writeFileSync(file, jsonData);
             }
         
 
