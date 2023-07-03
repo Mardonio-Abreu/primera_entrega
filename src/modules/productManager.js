@@ -44,9 +44,11 @@ class ProductManager {
 
         let thumbnailsValue = [];
 
-        if(thumbnails.length != 0){
+        if(thumbnails){
             thumbnailsValue.push(thumbnails);
 
+        }else{
+            thumbnailsValue.push("No images");
         }
 
         let flag = true;
@@ -55,6 +57,7 @@ class ProductManager {
 
         catalogue.map((product)=>{
             if (product.code === code){
+                console.log("Duplicated product code!");
                 flag = false;
                 }
         })
