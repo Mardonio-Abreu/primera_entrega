@@ -1,4 +1,4 @@
-//Class that creates the shopping carts
+//Class that creates the shopping cart
 class Cart {
     constructor(cid){
                 

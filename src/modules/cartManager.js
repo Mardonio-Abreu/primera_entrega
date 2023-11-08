@@ -1,3 +1,4 @@
+//Cart manager
 const fs = require('fs');
 const Cart = require('./cart');
 
